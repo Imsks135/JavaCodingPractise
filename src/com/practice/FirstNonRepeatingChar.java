@@ -6,14 +6,15 @@ import java.util.Scanner;
 
 public class FirstNonRepeatingChar {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter an String:");
-        String input = sc.nextLine();
-        char result = findfirstnonrepeat(input);
-        if (result != '\0') {
-            System.out.println("First Non-Repeating Character is: " + result);
-        } else {
-            System.out.println("No Non-Repeating Character");
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter an String:");
+            String input = sc.nextLine();
+            char result = findfirstnonrepeat(input);
+            if (result != '\0') {
+                System.out.println("First Non-Repeating Character is: " + result);
+            } else {
+                System.out.println("No Non-Repeating Character");
+            }
         }
     }
 

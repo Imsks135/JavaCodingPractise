@@ -10,13 +10,14 @@ public class NumberToWordConverter {
 
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number");
-        int num = sc.nextInt();
-        if (num < 0 || num > 999) {
-            System.out.println("This program doesn't support number less than zero or more than 999");
-        } else {
-            System.out.println("Word Representation: " + convertNumberToWord(num));
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter a number");
+            int num = sc.nextInt();
+            if (num < 0 || num > 999) {
+                System.out.println("This program doesn't support number less than zero or more than 999");
+            } else {
+                System.out.println("Word Representation: " + convertNumberToWord(num));
+            }
         }
     }
 
