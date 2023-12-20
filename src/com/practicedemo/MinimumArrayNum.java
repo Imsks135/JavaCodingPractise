@@ -1,4 +1,4 @@
-package com.practice;
+package com.practicedemo;
 
 public class MinimumArrayNum {
     public static void main(String[] args) {
