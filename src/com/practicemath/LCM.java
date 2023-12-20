@@ -1,8 +1,8 @@
-package com.practice1;
+package com.practicemath;
 
 import java.util.Scanner;
 
-import static com.practice1.GCD.gcd;
+import static com.practicemath.GCD.gcd;
 
 public class LCM {
     public static void main(String[] args) {

@@ -1,9 +1,9 @@
-package com.practice1;
+package com.practicemath;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-import static com.practice1.CheckPrimeNum.checkprime;
+import static com.practicemath.CheckPrimeNum.checkprime;
 
 public class SieveOfEratosthenes {
     public static void main(String[] args) {
