@@ -10,7 +10,7 @@ public class SieveOfEratosthenes {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the Number:");
         int n = sc.nextInt();
-        sieve(n);
+        sieve(n);//TC:O(n*log(log(n)))
     }
 
     private static void sieve(int n) {
