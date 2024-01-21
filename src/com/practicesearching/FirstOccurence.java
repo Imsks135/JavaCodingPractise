@@ -7,7 +7,7 @@ public class FirstOccurence {
         System.out.println(firstocc(arr, n, x));
     }
 
-    private static int firstocc(int[] arr, int n, int x) {
+    static int firstocc(int[] arr, int n, int x) {
         int low = 0, high = n - 1;
         while (low <= high) {
             int mid = (low + high) / 2;
