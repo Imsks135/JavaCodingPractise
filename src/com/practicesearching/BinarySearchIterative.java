@@ -22,7 +22,7 @@ public class BinarySearchIterative {
 
     }
 
-    //TC : O(log n)
+    //TC : O(log n), SC:O(1)
     private static int checkbinary(int[] arr, int x) {
         int low = 0, high = arr.length - 1;
         while (low <= high) {
