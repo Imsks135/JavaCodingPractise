@@ -21,7 +21,7 @@ public class BinarySearchRecursive {
             System.out.println("Element found at index:"+ (y+1));
         }
     }
-
+ //TC:O(log n) , SC:O(log n)
     private static int checkkbinary(int[] arr, int low, int high, int x) {
         if(low>high)return -1;
         int mid=(low+high)/2;
