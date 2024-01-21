@@ -2,7 +2,8 @@ package com.practicesearching;
 
 public class LastOccurence {
     public static void main(String[] args) {
-        int[] arr = {5, 10, 10, 10, 10, 20, 20};
+
+        int[] arr = {4, 10, 10, 10, 10, 20, 20};
         int n = 7, x = 10;
         System.out.println(lastocc(arr, n, x));
     }
