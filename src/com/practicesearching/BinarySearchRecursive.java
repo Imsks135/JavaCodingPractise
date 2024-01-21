@@ -13,20 +13,20 @@ public class BinarySearchRecursive {
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
-        int y=checkkbinary(arr,0,n-1,x);
-        if(y==-1){
+        int y = checkkbinary(arr, 0, n - 1, x);
+        if (y == -1) {
             System.out.println("Element not exists");
-        }
-        else{
-            System.out.println("Element found at index:"+ (y+1));
+        } else {
+            System.out.println("Element found at index:" + (y + 1));
         }
     }
- //TC:O(log n) , SC:O(log n)
+
+    //TC:O(log n) , SC:O(log n)
     private static int checkkbinary(int[] arr, int low, int high, int x) {
-        if(low>high)return -1;
-        int mid=(low+high)/2;
-        if(arr[mid]==x)return mid;
-        else if(arr[mid]>x)return checkkbinary(arr,low,mid-1,x);
-        else return checkkbinary(arr,mid+1,high,x);
+        if (low > high) return -1;
+        int mid = (low + high) / 2;
+        if (arr[mid] == x) return mid;
+        else if (arr[mid] > x) return checkkbinary(arr, low, mid - 1, x);
+        else return checkkbinary(arr, mid + 1, high, x);
     }
 }
