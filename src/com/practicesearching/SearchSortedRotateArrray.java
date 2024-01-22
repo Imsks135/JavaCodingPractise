@@ -7,6 +7,7 @@ public class SearchSortedRotateArrray {
         System.out.println(searchsortedrotatearray(arr, n, x));
     }
 
+    //TC: O(log n),SC:O(1)
     private static int searchsortedrotatearray(int[] arr, int n, int x) {
         int low = 0, high = n - 1;
         while (low <= high) {
