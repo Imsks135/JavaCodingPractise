@@ -22,7 +22,7 @@ public class BinarySearchRecursive {
     }
 
     //TC:O(log n) , SC:O(log n)
-    private static int checkkbinary(int[] arr, int low, int high, int x) {
+    static int checkkbinary(int[] arr, int low, int high, int x) {
         if (low > high) return -1;
         int mid = (low + high) / 2;
         if (arr[mid] == x) return mid;
