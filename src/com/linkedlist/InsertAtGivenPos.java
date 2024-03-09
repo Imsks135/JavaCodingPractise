@@ -18,7 +18,7 @@ public class InsertAtGivenPos {
         System.out.println("After Insertion:");
         printlist(temp1);
     }
-
+//TC:O(N) SC:O(1)
     private static Node insertAtPos(Node head, int pos, int x) {
         Node temp = new Node(x);
         if (pos == 1) {

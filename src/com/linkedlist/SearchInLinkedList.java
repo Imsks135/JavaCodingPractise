@@ -13,7 +13,7 @@ public class SearchInLinkedList {
             System.out.println("The position of " + x + " is " + temp);
         } else System.out.println("Not found");
     }
-
+//TC:O(N) SC:O(1)
     private static int searchinLL(Node head, int x) {
         int pos = 1;
         Node curr = head;
