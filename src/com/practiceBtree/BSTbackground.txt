@@ -1,0 +1,36 @@
+Time Complexity for Search,Insert,Delete,FindClosest,SortedTraversal:
+
+1) For BST (Balanced)
+   Search -- O(log N)
+   Insert -- O(log N)
+   Delete -- O(log N)
+   FindClosest -- O(log N)
+   SortedTraversal -- O(N)
+
+2) For Array(Unsorted)
+   Search -- O(N)
+   Insert -- O(1)
+   Delete -- O(N)
+   FindClosest -- O(N)
+   SortedTraversal -- O(N*logN)
+
+3) For Array(Sorted)
+   Search -- O(log N)
+   Insert -- O(N)
+   Delete -- O(N)
+   FindClosest -- O(log N)
+   SortedTraversal -- O(N)
+
+4) For LinkedList
+   Search -- O(N)
+   Insert -- O(1) & O(N) if Sorted
+   Delete -- O(N)
+   FindClosest -- O(N)
+   SortedTraversal -- O(N*logN) & O(N) if in case of Sorted linked list
+
+5) For Hash Table
+   Search -- O(1)
+   Insert -- O(1)
+   Delete -- O(1)
+   FindClosest -- O(N)
+   SortedTraversal -- O(N*logN)
