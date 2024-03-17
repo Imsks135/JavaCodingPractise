@@ -34,7 +34,7 @@ public class InsertInBST {
         return root;
     }
 
-    private static void inorderTraversal(Node root) {
+    static void inorderTraversal(Node root) {
         if (root != null) {
             inorderTraversal(root.left);
             System.out.print(root.key + " ");
