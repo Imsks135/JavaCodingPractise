@@ -1,0 +1,100 @@
+--->Idea: keep the height as O(log N)
+--->Background: same set of keys can make different height BST
+    Order1: 7,10,11, 15,30,35,40                 Order-2: 15,10,7,11,35,30,40
+   7
+    \                                                        15
+     10                                                     /  \
+      \                                                   10    35
+       11  height: O(N)                                  /  \   /  \   height: O(log N)
+         \                                              7   11 30   40
+         15          ======================================================================
+           \         -----> If we keys in advance,we can make a perfectly balanced BST
+            30              7,10,15,20,25,30,35
+              \                                       20
+               35                                   /    \
+                 \                                10      30
+                  40                            /    \    /  \
+                                               7    15   25   35
+====================================================================================
+---> How to keep it balanced when random insertions/deletions happening?
+    The idea is to so some restructuring (or re-balancing)when doing insertion/deletions
+
+         Insert 100,200 and 200 in BST
+
+         100        100         100                   200
+        insert 100     \           \   Re=Struct     /   \   (Counter-clockwise)
+                       200         200   =====>>   100   300   Left Rotation
+                   insert 200         \
+                                     300
+                                   insert 300
+        ============================================================================
+
+         300          300          300                 200
+       insert 300    /            /     Re-Struct     /   \   (clockwise)
+                    200         200       =====>>   100   300   Right Rotation
+                  insert 200   /
+                              100
+                             insert 100
+
+
+   Rotation:
+
+                       30                                       20
+                     /    \   Right-Rotation                  /    \
+                   20      40  -------->                     10     30
+                  /  \                                      /      /   \
+                10    25                                   5      25   40
+               /
+              5
+
+
+  Self-Balancing Tree =>
+         1. AVL Tree (very strict in terms of height balanced).
+         2. Red Black Tree (loose strict in terms of balanced)-it causes less structuring
+            In general Red Black Tree sed more in compare to AVL Tree, In java used as TreeSet and TreeMap.
+
+  AVL Tree:
+     1. It is a BST (For every Node,left subtree is smaller and right greater).
+     2. It is height balanced (For every Node,difference between left and right subtrees heights doesn't exceed 1).
+        Balanced factor=|lh-rh|<=1
+
+     Insert Operation:
+     a.Perform normal BST insert.
+     b.Traverse all ancestors of the newly inserted node from the node to root.
+     c.If you find an unbalanced node check for any of the below cases:
+         1. Left-Left (single rotation)
+         2. Right-Right (single rotation)
+         3. Left-Right (double rotation)
+         4. Right-Left (double rotation)
+
+     Time Complexities:
+     height = theta(log N)
+
+     Height of AVL tree: h < c*log(base=2)(n+2)+b
+     where c = 1.4405 and b = -1.3277
+
+
+ Red Black Tree:
+   1. Every Node is either red or black.
+   2. Root is always black.
+   3. No two consecutive Reds.
+   4. Number of black Node from every Node to all of its descendants leaves should be same.
+
+                                            20-->B
+                                          /    \
+                                    B<--10      40 -->R
+                                               /    \           Where B = Black Node , R = Red Node
+                                        B<-- 30      80 -->B
+                                           /   \    /   \
+                                         25    35  70    100
+                                         R      R  R      R
+
+   5. Number of Nodes on the path from a Node to its farthest descendant leaf should be not more than twice
+   than the number of Nodes on the path to its closest descendant leaf.
+
+ Applications of BST:
+  1. To maintain sorted stream of data ( or sorted set of data).
+  2. To implement doubly ended priority queue.
+  3. To solve problems like:
+      a. Count smaller/greater in a stream.
+      b. Floor/Ceiling/Smaller in a stream.
