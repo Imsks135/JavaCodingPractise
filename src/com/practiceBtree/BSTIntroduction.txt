@@ -1,0 +1,13 @@
+Following are the points noted in Binary Search Tree:
+
+  1)For every,Node keys in left side are smaller & keys in right side are greater.
+  2)All keys are typically considered as distinct.
+  3)Like LinkedList it is a linked data structure.
+
+                           50
+                          /  \
+                        30     70
+                      /   \   /  \
+                    10    40 60   80
+
+  4)Implemented in C++ as map,set,multimap and multiset And in Java as TreeSet,TreeMap
